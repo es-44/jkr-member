@@ -1,9 +1,13 @@
 spring:
   cloud:
+    function:
+      joinCommunity;
     stream:
       bindings:
         member-out-0:
           destination: member-topic
+        joinCommunity-in-0:
+          destination: community-join-topic
       kafka:
         binder:
           brokers: localhost:9092
